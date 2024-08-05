@@ -1,75 +1,76 @@
+<!DOCTYPE html>
 <html>
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sign Up</title>
-    <link rel="stylesheet" href="signin.css">
-    <!-- Include Font Awesome for icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-</head>
-<body>
-    <nav>
-        <div class="logo">
-            <a href="index.html"><img src="logo.png" alt="Ankur Plant Store Logo"></a>
-        </div>
-        <ul class="nav-links">
-            <li><a href="index.html">Home</a></li>
-            <li class="dropdown">
-                <a href="product.html" class="dropbtn">Products</a>
-                <div class="dropdown-content">
-                    <a href="product.html">All Items</a>
-                    <a href="plant.html">Plants</a>
-                    <a href="planters.html">Planters</a>
-                </div>
-            </li>
-            <li><a href="quiz.html">Plant Match Quiz</a></li>
-            <li><a href="contact.html">Contact Us</a></li>
-            <li><a href="Reviews.html">Reviews</a></li>
-        </ul>
-        <div class="auth-cart">
-            <a href="#"><i class="fas fa-heart"></i></a>
-            <a href="signin.html"><i class="fas fa-user"></i></a>
-            <a href="cart.html"><i class="fas fa-shopping-cart"></i></a>
-        </div>
-    </nav>
-
-    <div class="review-container">
-        <h2>Submit Your Review</h2>
-        <textarea id="reviewText" rows="4" placeholder="Write your review here..."></textarea>
-        <button id="submitReview">Submit Review</button>
-
-    </div>
-
-    <div class="reviews">
-        <h3>Reviews:</h3>
-        <div id="reviewsList"></div>
-    </div>
-    <footer>
-        <p>&copy; 2024 Ankur Plant Store. All rights reserved.</p>
-    </footer>
-
-    <script> document.addEventListener("DOMContentLoaded", function() {
-    var submitBtn = document.getElementById("submitReview");
-    var reviewText = document.getElementById("reviewText");
-    var reviewsList = document.getElementById("reviewsList");
-
-    submitBtn.onclick = function() {
-        var review = reviewText.value.trim();
-        if (review) {
-            var reviewElement = document.createElement("div");
-            reviewElement.className = "review";
-            reviewElement.textContent = review;
-            reviewsList.appendChild(reviewElement);
-            reviewText.value = "";
-        } else {
-            alert("Please write a review before submitting.");
-        }
-    }
-});
-</script>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Sign Up</title>
+        <link rel="stylesheet" href="signin.css">
+        <!-- Include Font Awesome for icons -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <nav>
+            <div class="logo">
+                <a href="index.html"><img src="logo.png" alt="Ankur Plant Store Logo"></a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li class="dropdown">
+                    <a href="product.html" class="dropbtn">Products</a>
+                    <div class="dropdown-content">
+                        <a href="product.html">All Items</a>
+                        <a href="plant.html">Plants</a>
+                        <a href="planters.html">Planters</a>
+                    </div>
+                </li>
+                <li><a href="quiz.html">Plant Match Quiz</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="Reviews.html">Reviews</a></li>
+            </ul>
+            <div class="auth-cart">
+                <a href="#"><i class="fas fa-heart"></i></a>
+                <a href="signin.html"><i class="fas fa-user"></i></a>
+                <a href="cart.html"><i class="fas fa-shopping-cart"></i></a>
+            </div>
+        </nav>
     
-</body>
+        <div class="review-container">
+            <h2>Submit Your Review</h2>
+            <textarea id="reviewText" rows="4" placeholder="Write your review here..."></textarea>
+            <button id="submitReview">Submit Review</button>
+    
+        </div>
+    
+        <div class="reviews">
+            <h3>Reviews:</h3>
+            <div id="reviewsList"></div>
+        </div>
+        <footer>
+            <p>&copy; 2024 Ankur Plant Store. All rights reserved.</p>
+        </footer>
+    
+        <script> document.addEventListener("DOMContentLoaded", function() {
+        var submitBtn = document.getElementById("submitReview");
+        var reviewText = document.getElementById("reviewText");
+        var reviewsList = document.getElementById("reviewsList");
+    
+        submitBtn.onclick = function() {
+            var review = reviewText.value.trim();
+            if (review) {
+                var reviewElement = document.createElement("div");
+                reviewElement.className = "review";
+                reviewElement.textContent = review;
+                reviewsList.appendChild(reviewElement);
+                reviewText.value = "";
+            } else {
+                alert("Please write a review before submitting.");
+            }
+        }
+    });
+    </script>
+        
+    </body>
 </html>
