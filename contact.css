@@ -137,15 +137,15 @@ nav {
     align-items: center;
     padding: 10px 20px;
     background: #e4e2dd;
-    z-index: 1000; /* Ensure the nav is above other content */
+    z-index: 1000; 
 }
 
 nav .logo {
-    margin-right: auto; /* Pushes logo to the left */
+    margin-right: auto; 
 }
 
 nav .logo img {
-    height: 70px; /* Adjust height as needed */
+    height: 70px; 
 }
 
 nav .nav-links {
@@ -163,10 +163,10 @@ nav .nav-links li {
 nav .nav-links a,
 nav .auth-cart a {
     text-decoration: none;
-    color: #333; /* Ensure same color for links and icons */
+    color: #333; 
     padding: 5px 10px;
     transition: color 0.3s ease;
-    font-size: 14px; /* Consistent font size */
+    font-size: 14px; 
 }
 
 nav .nav-links a:hover,
@@ -213,12 +213,10 @@ nav .auth-cart i {
     background-color: #f1f1f1;
 }
 
-/* Show the dropdown menu on hover */
 .dropdown:hover .dropdown-content {
     display: block;
 }
 
-/* Ensure dropdown stays within the navbar */
 .nav-links .dropdown-content {
     top: 100%;
     left: 0;
@@ -247,12 +245,10 @@ nav .auth-cart i {
     background-color: #f1f1f1;
 }
 
-/* Show the dropdown menu on hover */
 .dropdown:hover .dropdown-content {
     display: block;
 }
 
-/* Ensure dropdown stays within the navbar */
 .nav-links .dropdown-content {
     top: 100%;
     left: 0;
