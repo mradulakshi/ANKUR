@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plant Match Quiz</title>
+    <link rel="stylesheet" href="quiz.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav>
+        <div class="logo">
+            <a href="index.html"><img src="logo.png" alt="Ankur Plant Store Logo"></a>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li class="dropdown">
+                <a href="product.html" class="dropbtn">Products</a>
+                <div class="dropdown-content">
+                    <a href="product.html">All Items</a>
+                    <a href="plant.html">Plants</a>
+                    <a href="planters.html">Planters</a>
+                </div>
+            </li>
+            <li><a href="#quiz">Plant Match Quiz</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="Reviews.html">Reviews</a></li>
+        </ul>
+        <div class="auth-cart">
+            
+            <a href="signin.html"><i class="fas fa-user"></i></a>
+            <a href="cart.html"><i class="fas fa-shopping-cart"></i></a>
+        </div>
+    </nav>
+    <section style="margin-top: 200px;">
+        <div class="quiz-container">
+            <h1 style="padding: 30px;">Plant Match Quiz</h1>
+            <form id="quizForm">
+                <div class="quiz-question">
+                    <label for="preferences">What type of plants do you like?</label>
+                    <select id="preferences" name="preferences">
+                        <option value="flowering">Flowering</option>
+                        <option value="foliage">Foliage</option>
+                        <option value="succulents">Succulents</option>
+                    </select>
+                </div>
+                <div class="quiz-question">
+                    <label for="living-conditions">Describe your home environment:</label>
+                    <select id="living-conditions" name="living-conditions">
+                        <option value="bright">Bright</option>
+                        <option value="moderate">Moderate</option>
+                        <option value="low">Low Light</option>
+                    </select>
+                </div>
+                <div class="quiz-question">
+                    <label for="care-capabilities">Your experience and willingness to care for plants:</label>
+                    <select id="care-capabilities" name="care-capabilities">
+                        <option value="experienced">Experienced</option>
+                        <option value="beginner">Beginner</option>
+                        <option value="low-maintenance">Prefer Low Maintenance</option>
+                    </select>
+                </div>
+                <div class="quiz-question">
+                    <label for="space-size">Space available for plants:</label>
+                    <select id="space-size" name="space-size">
+                        <option value="small">Small Apartment</option>
+                        <option value="medium">Medium Space</option>
+                        <option value="large">Large Garden</option>
+                    </select>
+                </div>
+                <div class="quiz-question">
+                    <label for="allergies">Do you have any allergies to specific plants or pollen?</label>
+                    <select id="allergies" name="allergies">
+                        <option value="none">No</option>
+                        <option value="yes">Yes</option>
+                    </select>
+                </div>
+                <div class="quiz-question">
+                    <label for="travel-frequency">How often do you travel or are away from home for extended periods?</label>
+                    <select id="travel-frequency" name="travel-frequency">
+                        <option value="rarely">Rarely</option>
+                        <option value="occasionally">Occasionally</option>
+                        <option value="frequently">Frequently</option>
+                    </select>
+                </div>
+                <div class="quiz-question">
+                    <label for="functional-benefits">Are you interested in plants with specific benefits?</label>
+                    <select id="functional-benefits" name="functional-benefits">
+                        <option value="yes">Yes</option>
+                        <option value="no">No</option>
+                        <option value="no-preference">No Preference</option>
+                    </select>
+                </div>
+                <div class="quiz-question">
+                    <label for="care-routine">Do you prefer a structured plant care routine or a more flexible one?</label>
+                    <select id="care-routine" name="care-routine">
+                        <option value="structured">Structured</option>
+                        <option value="flexible">Flexible</option>
+                    </select>
+                </div>
+                <button type="submit">Submit</button>
+            </form>
+            <div id="quizResult"></div>
+        </div>
+    </section>
+    
+    <script src="quiz.js"></script>
+</body>
+</html>
