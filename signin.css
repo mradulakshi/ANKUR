@@ -388,4 +388,36 @@ button {
   form .btn button:hover{
     background: #1b1b1b;
   }
+/*** reviews*******/
+  .star-rating {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+}
+.star-rating input {
+    display: none;
+}
+.star-rating label {
+    font-size: 2em;
+    color: #d3d3d3;
+    cursor: pointer;
+}
+.star-rating input:checked ~ label,
+.star-rating input:checked ~ label ~ label {
+    color: #ffc700;
+}
+.star-rating input:hover ~ label,
+.star-rating input:hover ~ label ~ label {
+    color: #ffdb70;
+}
+.review-container, .reviews {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+}
+.reviews .review {
+    border-bottom: 1px solid #ccc;
+    padding: 10px 0;
+    overflow-y: auto;
+}
   
