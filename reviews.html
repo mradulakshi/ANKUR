@@ -40,33 +40,7 @@
         <h2>Submit Your Review</h2>
         <textarea id="reviewText" rows="4" placeholder="Write your review here..."></textarea>
         <button id="submitReview">Submit Review</button>
-        <!-- <div class="container">
-            <div class="post">
-              <div class="text">Thanks for rating us!</div>
-              <div class="edit">EDIT</div>
-            </div>
-            <div class="star-widget">
-              <input type="radio" name="rate" id="rate-5">
-              <label for="rate-5" class="fas fa-star"></label>
-              <input type="radio" name="rate" id="rate-4">
-              <label for="rate-4" class="fas fa-star"></label>
-              <input type="radio" name="rate" id="rate-3">
-              <label for="rate-3" class="fas fa-star"></label>
-              <input type="radio" name="rate" id="rate-2">
-              <label for="rate-2" class="fas fa-star"></label>
-              <input type="radio" name="rate" id="rate-1">
-              <label for="rate-1" class="fas fa-star"></label>
-            </div>
-            <form action="#">
-                <header></header>
-                <div class="textarea">
-                  <textarea cols="30" placeholder="Describe your experience.."></textarea>
-                </div>
-                <div class="btn">
-                  <button type="submit">Post</button>
-                </div>
-              </form>
-          </div> -->
+
     </div>
 
     <div class="reviews">
@@ -74,6 +48,24 @@
         <div id="reviewsList"></div>
     </div>
 
-    <script src="rate.js"></script>
+    <script> document.addEventListener("DOMContentLoaded", function() {
+    var submitBtn = document.getElementById("submitReview");
+    var reviewText = document.getElementById("reviewText");
+    var reviewsList = document.getElementById("reviewsList");
+
+    submitBtn.onclick = function() {
+        var review = reviewText.value.trim();
+        if (review) {
+            var reviewElement = document.createElement("div");
+            reviewElement.className = "review";
+            reviewElement.textContent = review;
+            reviewsList.appendChild(reviewElement);
+            reviewText.value = "";
+        } else {
+            alert("Please write a review before submitting.");
+        }
+    }
+});
+</script>
 </body>
 </html>
